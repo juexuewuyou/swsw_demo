@@ -1,0 +1,53 @@
+.shucheng .san{
+    padding:12px
+  }
+  .shucheng .san .ph {
+    display: flex;
+    justify-content: space-between;
+  }
+  .shucheng .san .f_ph {
+    padding: 12px;
+    font-family: "simhei";
+  }
+  .shucheng .san .bd .phb div:first-child {
+    border-radius: 30px 0px 0px 30px;
+  }
+  .shucheng .san .bd .phb div:last-child {
+    border-radius: 0px 30px 30px 0px;
+  }
+  .shucheng .san .san_bd a{
+   background:#febf85;
+   padding:14px 0px;
+   margin:0px 1px;
+   /* border-bottom: 3px solid #f3963f; */
+  }
+  .shucheng .san .san_bd  a:first-child{
+      border-radius: 30px 0px 0px 30px;
+  }
+  .shucheng .san .san_bd  a:last-child{
+      border-radius: 0px 30px 30px 0px;
+  }
+  .shucheng .san  .bd_container1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding:0px 10px;
+    margin-top:14px
+  }
+  .shucheng .san  .bd_container1>div{
+    width:49%;height:100px;
+    margin:3px 0px
+  }
+  .shucheng .san  .bd_container1 .container_text{
+    width:160;height:100px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .shucheng .san  .bd_container1 .container_text .bd_details{
+    width:66px;height:84px;
+     display:flex;
+     flex-direction: column;
+     justify-content: space-between;
+     font :bold 16px simhei;
+  
+  }
