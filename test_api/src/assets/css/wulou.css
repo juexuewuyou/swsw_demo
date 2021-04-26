@@ -1,0 +1,50 @@
+.shucheng .list {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+  }
+  .shucheng .list .list_for {
+    margin-top: 20px;
+  }
+  .shucheng .list .list-top {
+    background: #e5b6a0;
+  }
+  .shucheng .list .list-top,
+  .shucheng .list .list-details {
+    display: flex;
+  }
+  .shucheng .list .list-details {
+    flex-direction: column;
+    margin-left: 6px;
+    width: 70%;
+    height: 85px;
+    padding: 6px 0px 0px 4px;
+    overflow: hidden;
+  }
+  .shucheng .list .list-details span:first-child {
+    font: bold 18px simhei;
+  }
+  .shucheng .list .list-details span:last-child {
+    margin-top: 14px;
+    font: bold 10px simhei;
+  }
+  /*  */
+  .shucheng .list-b-contanier {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+    /* justify-content: space-between; */
+    /* padding:0px 10px; */
+    margin-top: 9px;
+  }
+  
+  .shucheng .list-b-contanier .container-b-text {
+    width: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 5px 10px;
+    font: 12px simhei;
+  }

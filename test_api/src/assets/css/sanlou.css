@@ -41,7 +41,7 @@
   .shucheng .san  .bd_container1 .container_text{
     width:160;height:100px;
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
   }
   .shucheng .san  .bd_container1 .container_text .bd_details{
     width:66px;height:84px;
@@ -49,5 +49,5 @@
      flex-direction: column;
      justify-content: space-between;
      font :bold 16px simhei;
-  
+    margin-left:12px
   }
