@@ -12,11 +12,11 @@ import moment from 'moment'
 import erLou from './components/erlou.vue'
 import Banner from './components/banner.vue'
 import Sanlou from './components/sanlou.vue'
-// import wulou from './components/wulou.vue'
+import wulou from './components/wulou.vue'
 Vue.component('my-erlou',erLou)
 Vue.component('my-sanlou',Sanlou)
 Vue.component('my-banner', Banner)
-//  Vue.component('my-wulou', wulou)
+ Vue.component('my-wulou', wulou)
 
 Vue.use(MintUI)
 Vue.prototype.moment=moment
