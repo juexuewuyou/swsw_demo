@@ -16,7 +16,6 @@
             <mt-navbar
               v-model="selectede"
               class="sc_left"
-              style=" width: 20%"
             >
               <mt-tab-item id="1"> 全部分类 </mt-tab-item>
               <mt-tab-item id="2">推荐榜</mt-tab-item>
@@ -128,7 +127,8 @@ export default {
 .fenlei .sc_left {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items:center;
+   width: 25% 
   
 }
 .fenlei .sc_left a {
@@ -138,7 +138,10 @@ export default {
   font-size: 16px;
 }
 .fenlei .sc_left .mint-tab-item.is-selected {
-   
-  background: #febf85;
+   width:100%;
+   border-bottom:3px solid #e5b6a0;
+   border-top-right-radius:6px;
+   border-bottom-right-radius:6px;
+    background-image: linear-gradient(to right, #e5b6a0, #febf85);
 }
 </style>
