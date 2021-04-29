@@ -53,10 +53,10 @@
   </div>
 </template>
 <style>
-.reg  .tit{
- background: rgba(0,0,0,0);
- color:maroon;
- font-size:20px
+.reg .tit {
+  background: rgba(0, 0, 0, 0);
+  color: maroon;
+  font-size: 20px;
 }
 .reg .tex {
   font-size: 12px;
@@ -97,7 +97,7 @@ export default {
     usercheck() {
       if (this.userStr.trim() !== "") {
         let userName = this.userStr;
-        let useReg = /^.{6,12}$/;
+        let useReg = /^.{3,12}$/;
         let res = useReg.test(userName);
         if (res == true) {
           this.userNameState = "success";
@@ -184,12 +184,25 @@ export default {
         .post("/register", `uname=${userstr}&upwd=${pwdstr}`)
         .then((res) => {
           //注册成功或失败后执行的操作
-          console.log(res.data);
+           console.log(res.data);
+          if (res.data.code == 200) {
+            this.$toast({
+              message: "注冊成功",
+              position: "bottom",
+              duration: 3000,
+            });
+            this.userStr = "";
+            this.pwdStr = "";
+            this.regPwd = "";
+            this.$router.push("/");
+          }else{
+              this.$toast({
+              message: `注冊失败: 用户名已存在`,
+              position: "bottom",
+              duration: 3000,
+            });
+          }
         });
-      this.userStr = "";
-      this.pwdStr = "";
-      this.regPwd = "";
-      this.$router.push("/");
     },
   },
   watch: {
@@ -201,7 +214,7 @@ export default {
     },
     regPwd() {
       this.aa();
-    }
+    },
     //  emailStr(){
     //    this.aa()
     //  }

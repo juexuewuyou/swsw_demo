@@ -31,33 +31,7 @@
   </div>
 </template>
 <style>
-.login .m-header {
-  background: #fff;
-
-  height: 56px;
-  font-size: 16px;
-  background-image: linear-gradient(to bottom, #fff, #fff);
-}
-.login .mint-header-title {
-  font-size: 22px;
-  color: #f89a43;
-}
-.login .mint-header-button.is-right {
-  color: #8f8f8f;
-  text-align: center;
-}
-.login .logo {
-  margin: 0 auto;
-  width: 300px;
-  height: 195px;
-}
-.login .mint-button {
-  height: 50px;
-  border-radius: 30px;
-}
-.login .btn {
-  background-image: linear-gradient(to right, #e5b6a0, #febf85);
-}
+@import '../assets/css/isLogin.css';
 </style>
 
 <script>
@@ -77,6 +51,7 @@ export default {
         .post("/login", `uname=${username}&upwd=${password}`)
         .then((res) => {
           let result = res.data;
+          console.log(result)
           if (result.code == 200) {
             this.$toast({
               message: "登陆成功",
@@ -89,9 +64,9 @@ export default {
             //     this.$store.commit('updataisLogin',user)
             //      sessionStorage.setItem('isLogin',1)
             //     sessionStorage.setItem('user',JSON.stringify(user))
-            this.$router.push("/shouye");
+            this.$router.push("/shucheng");
           } else {
-            this.$messagebox("登陆失败！密码或用户名错误~");
+            this.$messagebox("登陆失败！密码或用户名错误");
           }
         });
     },
