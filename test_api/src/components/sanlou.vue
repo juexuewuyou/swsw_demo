@@ -13,7 +13,7 @@
           </div>
           <!--路由嵌套  ╭榜单╮  -->
           <mt-navbar  v-model="bd" class="san_bd">
-            <mt-tab-item id="wj" class="font_bd">完结榜</mt-tab-item>
+            <mt-tab-item id="wj"   class="font_bd">完结榜</mt-tab-item>
             <mt-tab-item id="dr" class="font_bd">大热榜</mt-tab-item>
             <mt-tab-item id="hp" class="font_bd">好评榜</mt-tab-item>
             <mt-tab-item id="tj" class="font_bd">推荐榜</mt-tab-item>
@@ -22,7 +22,7 @@
             <mt-tab-container-item id="wj" >
               <!-- 完结榜 -->
               <div class="bd_container1">
-               <div class="container_text"  v-for="i of 3">
+               <div class="container_text"  v-for="i of 4">
                  <!-- 文本区域1 -->
                  <div style="width:64px;height:85px">
                    <!-- 书籍图片 -->
@@ -100,9 +100,10 @@
 </style>
 <script>
 export default {
+  props:["p1","p2","p3","p4","p5","p6"],
   data(){
     return {
-      bd:'wj'
+      bd:'wj',
     }
   }
 }

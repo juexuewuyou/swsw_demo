@@ -7,7 +7,7 @@ import Shouye from '../tasting/Shouye.vue'
 import isLogin from '../tasting/isLogin.vue'
 import shucheng from '../tasting/shucheng.vue'
 import fenlei from '../tasting/fenlei.vue'
-import wode from '../tasting/wode.vue'
+import wode from '../tasting/Wode.vue'
 // import erlou from '../tasting/erlou.vue'
 import details from '../tasting/details.vue'
 
@@ -27,7 +27,8 @@ const routes = [
   {
     path: '/shucheng',
     name: ' shucheng',
-    component: shucheng
+    component: shucheng,
+    prors:true
   },
   {
     path: '/wode',

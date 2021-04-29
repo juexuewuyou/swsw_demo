@@ -2,7 +2,7 @@
   <div class="shucheng">
     <!-- <mt-header title="书城"></mt-header> -->
     <mt-navbar v-model="selected" class="tit" fixed>
-      <mt-tab-item id="3" class="font_title">推荐</mt-tab-item>
+      <!-- <mt-tab-item id="2" class="font_title">推荐</mt-tab-item> -->
       <mt-tab-item id="2" class="font_title">女生</mt-tab-item>
       <mt-tab-item id="1" class="font_title">男生</mt-tab-item>
     </mt-navbar>
@@ -16,9 +16,9 @@
         <!-- 轮播图 -->
         <my-banner />
         <!-- 二楼 -->
-        <my-erlou />
+        <my-erlou :p1="p1" :p2="p2" :p3="p3" :p4="p4" :p5="p5" :p6="p6" />
         <!-- 三楼 -->
-        <my-sanlou />
+        <my-sanlou :p1="p1" :p2="p2" :p3="p3" :p4="p4" :p5="p5" :p6="p6" />
         <!-- 有时间再写 -->
         <!-- 五楼 -->
         <my-wulou />
@@ -37,23 +37,23 @@
       <mt-tab-container-item id="2">
         <my-banner />
         <!-- 全局組件 -->
-        <my-erlou />
+        <my-erlou :p1="p1" :p2="p2" :p3="p3" :p4="p4" :p5="p5" :p6="p6" />
         <!-- 三楼 -->
-        <my-sanlou />
+        <my-sanlou :p1="p1" :p2="p2" :p3="p3" :p4="p4" :p5="p5" :p6="p6" />
         <!-- 有时间再写 -->
         <!-- 五楼 -->
         <my-wulou />
       </mt-tab-container-item>
-      <mt-tab-container-item id="3">
-        <my-banner />
+      <!-- <mt-tab-container-item id="3">
+        <my-banner /> -->
         <!-- 全局組件 -->
-        <my-erlou />
+        <!-- <my-erlou  /> -->
         <!-- 三楼 -->
-        <my-sanlou />
+        <!-- <my-sanlou  /> -->
         <!-- 有时间再写 -->
         <!-- 五楼 -->
-        <my-wulou />
-      </mt-tab-container-item>
+        <!-- <my-wulou /> -->
+      <!-- </mt-tab-container-item> -->
     </mt-tab-container>
     <!-- 底部导航 -->
     <mt-tabbar v-model="activede" fixed>
@@ -107,12 +107,35 @@ export default {
   data() {
     return {
       selected: "2",
+      p1:{},
+      p2:{},
+      p3:{},
+      p4:{},
+      p5:{},
+      p6:{},
       activede: "sc",
       h: "100px",
       phb: "1",
+     
     };
   },
-  methods: {},
+  methods: {
+    _axios() {
+      let sid=this.selected;
+      this.axios
+        .get("/shucheng", {
+          params: {
+            sid: sid,
+          },
+        })
+        .then((res) => {
+          //console.log(res.data.results);
+          [this.p1,this.p2,this.p3,this.p4,this.p5,this.p6]=res.data.results;
+          // })
+        });
+    },
+  },
+
   watch: {
     activede(val) {
       if (val == "sj") {
@@ -123,19 +146,18 @@ export default {
         this.$router.push("/wode");
       }
     },
-    selected() {
-      this.axios
-        .get("/shucheng", {
-          params: {
-            sid: this.selected,
-          },
-        })
-        .then((res) => {
-          console.log(res);
-        });
-    },
+    selected(){
+     this._axios()
+    }
   },
-  mounted() {},
+  mounted() {
+    
+     
+     this._axios()
+
+    
+      
+  },
 };
 </script>
 

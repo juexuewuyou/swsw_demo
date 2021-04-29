@@ -64,7 +64,7 @@ export default {
             //     this.$store.commit('updataisLogin',user)
             //      sessionStorage.setItem('isLogin',1)
             //     sessionStorage.setItem('user',JSON.stringify(user))
-            this.$router.push("/shucheng");
+            this.$router.push("/shouye");
           } else {
             this.$messagebox("登陆失败！密码或用户名错误");
           }

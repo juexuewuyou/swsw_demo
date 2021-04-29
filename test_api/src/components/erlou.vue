@@ -3,53 +3,58 @@
    <div id="er">
         <div class="erpdd">
           <div class="er_container">
-            <div class="left">
+            <div class="left" v-if="p1">
               <div class="myleft">
-
                 <div>
-                  <span>分类</span>
-                  <p>爽文·升级</p>
+                  <span>{{p1.cname}}</span>
+                  <p></p>
                 </div>
               </div>
             </div>
             <div class="right">
               <div class="myright">
-
                 <div>
-                  <span>小说</span>
+                  <span>{{p2.cname}}</span>
                   <p>热门小说畅读</p>
                 </div>
               </div>
             </div>
             <div class="bottom">
               <div class="mybottom">
-
-                <span>名著</span>
-                <p>经典·必读</p>
+                <span>{{p3.cname}}</span>
+                <p>爽文·升级</p>
               </div>
             </div>
             <div class="bottom">
               <div class="mybottom">
-
-                <span>经管</span>
-                <p>成功·管理</p>
+                <span>{{p4.cname}}</span>
+                <p> 经典·必读</p>
               </div>
             </div>
-            <div class="bottom">
+             <div class="bottom">
               <div class="mybottom">
-
-                <span>玄幻</span>
-                <p>升级打怪</p>
+                <span>{{p5.cname}}</span>
+                <p>眼光·格局</p>
               </div>
             </div>
-
           </div>
         </div>
       </div>
 </template>
 <script>
 export default {
-  
+    props:["p1","p2","p3","p4","p5","p6"],
+    data() {
+      return {
+
+      }
+    },
+    methods:{
+     
+    },
+    mounted(){
+     
+    }
 }
 </script>
 <style>
