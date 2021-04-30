@@ -1,0 +1,21 @@
+
+  仓库地址 :    
+   swsw:
+    origin
+      第十二次提交	
+   项目demo/无服务器/无数据库
+   https://github.com/juexuewuyou/swsw.git  
+
+  仓库地址:
+   swsw_all:
+     origine
+      第二十四次提交
+   项目demo/服务器/数据库
+   https://github.com/juexuewuyou/swsw_demo.git
+
+
+   //初始化本地仓库
+     git init 
+
+   //拉取
+     git clone  ... 

@@ -1,0 +1,21 @@
+server.get('/shujia', (req, res) => {
+  // let fid = req.query.fid;
+  let sql = 'select fid,fimg from sw_favorite';
+  pool.query(sql, (error, results) => {
+    if (error) throw error;
+    console.log(results)
+    if (results.length > 0) {
+      res.send({
+        message: 'ok',
+        code: 200,
+        results: results
+      });
+    } else {
+      res.send({
+        message: 'null',
+        code: 201,
+      });
+    }
+
+  });
+});

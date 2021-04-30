@@ -1,0 +1,59 @@
+接口
+
+女生区
+
+/shucheng
+
+ 查询历史分类下有哪些书籍;b_ascription=70
+select * from sw_books where categoryId=(select cid from sw_category where cname="玄幻");
+
+
+//////////////////////////////////////////////////////////////////
+//查寻书籍类别表中有关女生类别的类名
+
+select cname,cid from sw_category where sortId=(select sid from sw_sort where sname='女生');
+
+
+////////////////////////////////////////////////////////////////////////////
+//查寻书籍类别表中有关男生类别的类名
+
+ select cname,cid from sw_category where sortId=(select sid from sw_sort where sname='男生');
+
+///////////////////////////////////////////////////////////////////
+
+//查寻书籍类别表
+ select cid,cname from sw_category;
+
+
+//查寻用户收藏表
+select fid, fname,fimg from sw_favorite where userId=(select uid from sw_user where uname="?");
+
+//查寻男女分类表
+
+select sid,sname from sw_sort ;
+
+//查询书籍表中所有书籍
+select bid,bname,b_auth,b_photo from sw_books
+
+
+//查询某一个类别下包含的所有书籍
+ select * from sw_books where categoryId ='10';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
